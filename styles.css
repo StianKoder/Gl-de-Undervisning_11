@@ -6,14 +6,15 @@ body {
   font-family: system-ui, sans-serif;
   color: black;
   background-color: white;
+  margin: 0;
 }
 
 .container {
   display: grid;
   grid-template-areas:
-    'header header main2'
-    'sidebar main main2'
-    'footer main main2';
+    'header main main'
+    'sidebar main main'
+    'footer main main';
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto 1fr auto;
 }
@@ -30,7 +31,7 @@ aside {
 
 main {
   grid-area: main;
-  background-color: #cfe2ff;
+  background: linear-gradient(to top right, #ff7e5f, #cfe2ff);
 }
 .main2 {
   grid-area: main2;
@@ -40,4 +41,36 @@ main {
 footer {
   grid-area: footer;
   background-color: #f8d7da;
+}
+
+@media (max-width: 300px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "header"
+    "main"
+    "main2"
+    "sidebar"
+    "footer"
+  }
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+#julekule {
+  padding: 1rem;
+  border-radius: 100%;
+  border: none;
+  background-color: yellow;
+
+}
+
+.hidden {
+  display: none;
 }
