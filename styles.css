@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  color: black;
+  background-color: white;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    'header header main2'
+    'sidebar main main2'
+    'footer main main2';
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+
+header {
+  grid-area: header;
+  background-color: #ffcccb;
+}
+
+aside {
+  grid-area: sidebar;
+  background-color: #d1e7dd;
+}
+
+main {
+  grid-area: main;
+  background-color: #cfe2ff;
+}
+.main2 {
+  grid-area: main2;
+  background-color: #cfe2ff;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #f8d7da;
+}
